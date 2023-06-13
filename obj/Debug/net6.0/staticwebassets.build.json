@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "u7c9J0byKiwmCywc2GRoADtlYHnhSARfgqVNBxerQj4=",
+  "Source": "KeycloakMicroservice",
+  "BasePath": "_content/KeycloakMicroservice",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
