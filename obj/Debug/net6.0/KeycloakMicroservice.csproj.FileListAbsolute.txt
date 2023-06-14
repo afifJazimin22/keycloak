@@ -44,3 +44,9 @@
 /home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Certificate.dll
 /home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll
 /home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/Newtonsoft.Json.dll
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/package-lock.json
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/keycloak/angular.json
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/keycloak/package.json
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/keycloak/tsconfig.app.json
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/keycloak/tsconfig.json
+/home/afif/Documents/microservice/KeycloakMicroservice/bin/Debug/net6.0/keycloak/tsconfig.spec.json

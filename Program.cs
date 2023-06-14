@@ -13,9 +13,22 @@ var host = builder.Host;
 var services = builder.Services;
 // services.AddKeycloakAuthentication(configuration);
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy(name: "AllowAngularOrigins",
+                      builder =>
+                      {
+                          builder
+                            .WithOrigins("http://localhost:5040/api/users")
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                      });
+});
 
 builder.Services.AddControllers();
-builder.Services.AddSingleton<IConnectService, ConnectService>();
+builder.Services.AddScoped<IConnectService, ConnectService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddAuthentication(
         CertificateAuthenticationDefaults.AuthenticationScheme)
     .AddCertificate();
@@ -32,7 +45,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+app.UseCors("AllowAngularOrigins");
 app.UseAuthentication();
 
 app.UseAuthorization();

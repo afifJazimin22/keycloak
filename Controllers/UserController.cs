@@ -10,21 +10,23 @@ namespace KeycloakMicroservice.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+
     [EnableCors("AllowAngularOrigins")]
-    public class ConnectController : ControllerBase
+
+    public class UserController : ControllerBase
     {
-        private readonly IConnectService _connectService;
+        private readonly IUserService _userService;
 
-        public ConnectController(IConnectService connectService)
+        public UserController(IUserService userService)
         {
-            _connectService = connectService;
+            _userService = userService;
         }
+        
         [EnableCors("AllowAngularOrigins")]
-
-        [HttpPost("/api/connect")]
-        public async Task Connect()
+        [HttpGet("/api/users")]
+        public async Task<IActionResult> GetUsersAsync()
         {
-            await _connectService.Connect();
+            return Ok(await _userService.GetUser());
         }
     }
 }
